@@ -14,62 +14,35 @@
             background-color: rgba(255, 251, 251, 0.884); /* Translucent white background */
         }
         .product img {
-        width: 100%;
-        height: auto;
-    }
+            width: 100%;
+            height: auto;
+        }
+        #product-details {
+            display: none;
+        }
     </style>
-   
 </head>
-
 
 <body class="bg-gray-100">
     <div class="fixed top-0 left-0 right-0 z-50 navbar">
-        <div class="container mx-auto flex justify-between items-center px-4 text-gray-900 bg-opacity-30 backdrop-blur-md p-3 rounded-xl shadow-lg border border-white border-opacity-10">
-            <h2 class="text-3xl font-bold">CaKeFaCe</h2>
-            <!-- Responsive navigation menu -->
-            <div class="md:hidden">
-                <button id="menu-toggle" class="text-white focus:outline-none">
-                    <i class="fas fa-bars text-gray-900"></i>
-                </button>
-            </div>
-            <nav class="hidden md:flex space-x-6">
-                <a href="/index.html" class=" px-4 py-2 rounded-xl hover:bg-gray-300 hover:scale-105 transform transition duration-50">Home</a>
-                <a href="/products.html" class=" px-4 py-2 rounded-xl hover:bg-gray-300 hover:scale-105 transform transition duration-50">Product</a>
-                <a href="#" class=" px-4 py-2 rounded-xl hover:bg-gray-300 hover:scale-105 transform transition duration-50">About</a>
-                <a href="#" class=" px-4 py-2 rounded-xl hover:bg-gray-300 hover:scale-105 transform transition duration-50">Blog</a>
-            </nav>
-            <div class="hidden md:flex space-x-4 items-center">
-                <a href="#" class="text-gray-900 hover:text-green-300 flex items-center space-x-1">
-                    <i class="fas fa-phone"></i>
-                    <i class="fab fa-whatsapp"></i>
-                    <span>+91 8348847663</span>
-                </a>
-                <a href="#" class="bg-yellow-500 text-red-600 px-6 py-2 rounded-full hover:bg-yellow-600 transition duration-300 ease-in-out">Order Now</a>
-            </div>
-        </div>
+        <!-- Navbar code here -->
     </div>
 
     <!-- Responsive navigation menu -->
-    <div id="mobile-menu" class="navbar md:hidden hidden mt-16 cursor-pointer bg-opacity-10 backdrop-blur-md p-3 rounded-xl shadow-lg border border-white border-opacity-10 py-2">
-        <a href="/index.html" class="block px-4 py-2 hover:bg-red-700">Home</a>
-        <a href="/products.html" class="block px-4 py-2 hover:bg-red-700">Product</a>
-        <a href="#" class="block px-4 py-2 hover:bg-red-700">About</a>
-        <a href="#" class="block px-4 py-2 hover:bg-red-700">Blog</a>
-    </div>
+    <!-- Mobile menu code here -->
 
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4">
 
         <!-- Product 1 -->
-        <div class="product bg-white rounded-lg shadow-md overflow-hidden">
-            <a href="/order.html">
+        <div id="product1" class="product bg-white rounded-lg shadow-md overflow-hidden">
+            <a href="#" onclick="showProductDetails(1)">
                 <img src="/Cake_photo/cake (1).jpg" alt="Cake" class="w-full h-auto">
                 <h3 class="text-center text-lg font-semibold mt-2">Cake</h3>
                 <p class="text-center text-gray-700 font-medium">199</p>
             </a>
         </div>
-    
 
-        <div class="product bg-white rounded-lg shadow-md overflow-hidden">
+        <div id="2"class="product bg-white rounded-lg shadow-md overflow-hidden">
             <a href="/order.html">
             <img src="/Cake_photo/cake (2).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
@@ -216,21 +189,38 @@
     </div>
 
 
+        <!-- Add more products with unique IDs -->
 
+    </div>
 
-    <!-- Add more products as needed -->
+    <!-- Product Details Section -->
+    <div id="product-details" class="container mx-auto my-8 px-4">
+        <div id="product-details-content" class="bg-white rounded-lg shadow-md overflow-hidden p-4">
+            <!-- Product details will be displayed here -->
+        </div>
+    </div>
 
     <div class="clearfix"></div>
     <!-- Clear floats after each row -->
 
-</body>
-<script>
-    // Toggle mobile menu
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
+    <script>
+        function showProductDetails(productId) {
+            var productDetails = document.getElementById('product-details-content');
+            var productName = document.querySelector('#product' + productId + ' h3').innerText;
+            var productPrice = document.querySelector('#product' + productId + ' .text-gray-700').innerText;
 
-    menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-</script>
+            productDetails.innerHTML = `
+                <h2 class="text-xl font-semibold mb-2">${productName}</h2>
+                <img src="/Cake_photo/cake (${productId}).jpg" alt="${productName}" class="mb-2">
+                <p class="text-gray-700">${productPrice}</p>
+                <!-- Add more details about the product here -->
+            `;
+
+            // Show the product details section
+            document.getElementById('product-details').style.display = 'block';
+        }
+    </script>
+
+</body>
+
 </html>
