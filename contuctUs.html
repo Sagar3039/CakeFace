@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contuct Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <!-- Add Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.205); /* Translucent white background */
+        }
+    </style>
+</head>
+<body>
+    <div class="fixed top-0 left-0 right-0 z-50 navbar">
+        <div class="container mx-auto flex justify-between items-center px-4 text-gray-900 bg-opacity-30 backdrop-blur-md p-3 rounded-xl shadow-lg border border-white border-opacity-10">
+            <h2 class="text-3xl font-bold">CaKeFaCe</h2>
+            <!-- Responsive navigation menu -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-gray-900"></i>
+                </button>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="/index.html" class=" px-4 py-2 rounded-xl hover:bg-gray-300 hover:scale-105 transform transition duration-50">Home</a>
+                <a href="/products.html" class=" px-4 py-2 rounded-xl hover:bg-gray-300 hover:scale-105 transform transition duration-50">Product</a>
+                <a href="#" class=" px-4 py-2 rounded-xl hover:bg-gray-300 hover:scale-105 transform transition duration-50">About</a>
+                <a href="#" class=" px-4 py-2 rounded-xl hover:bg-gray-300 hover:scale-105 transform transition duration-50">Blog</a>
+            </nav>
+            <div class="hidden md:flex space-x-4 items-center">
+                <a href="#" class="text-gray-900 hover:text-green-300 flex items-center space-x-1">
+                    <i class="fas fa-phone"></i>
+                    <i class="fab fa-whatsapp"></i>
+                    <span>+91 8348847663</span>
+                </a>
+                <a href="#" class="bg-yellow-500 text-red-600 px-6 py-2 rounded-full hover:bg-yellow-600 transition duration-300 ease-in-out">Order Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Responsive navigation menu -->
+    <div id="mobile-menu" class="md:hidden hidden mt-16 cursor-pointer bg-opacity-10 backdrop-blur-md p-3 rounded-xl shadow-lg border border-white border-opacity-10 py-2">
+        <a href="/index.html" class="block px-4 py-2 hover:bg-red-700">Home</a>
+        <a href="/products.html" class="block px-4 py-2 hover:bg-red-700">Product</a>
+        <a href="#" class="block px-4 py-2 hover:bg-red-700">About</a>
+        <a href="#" class="block px-4 py-2 hover:bg-red-700">Blog</a>
+    </div>
+
+</body>
+<script>
+    // Toggle mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+</html>

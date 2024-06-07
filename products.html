@@ -4,31 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product List</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="product.css">
+    <title>CaKeFaCe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <!-- Add Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .navbar {
+            background-color: rgba(255, 251, 251, 0.884); /* Translucent white background */
+        }
+        .product img {
+        width: 100%;
+        height: auto;
+    }
+    </style>
+   
 </head>
 
-<body>
 
-    <div class="product">
-        <a href="/order.html">
-            <img src="/Cake_photo/cake (1).jpg" alt="Samsung Galaxy S20 Ultra">
-            <h3>Cake</h3>
-            <i class="fa-solid fa-indian-rupee-sign"> 199</i>
-        </a>
+<body class="bg-gray-100">
+    <div class="fixed top-0 left-0 right-0 z-50 navbar">
+        <div class="container mx-auto flex justify-between items-center px-4 text-gray-900 bg-opacity-30 backdrop-blur-md p-3 rounded-xl shadow-lg border border-white border-opacity-10">
+            <h2 class="text-3xl font-bold">CaKeFaCe</h2>
+            <!-- Responsive navigation menu -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-gray-900"></i>
+                </button>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="/index.html" class=" px-4 py-2 rounded-xl hover:bg-gray-300 hover:scale-105 transform transition duration-50">Home</a>
+                <a href="/products.html" class=" px-4 py-2 rounded-xl hover:bg-gray-300 hover:scale-105 transform transition duration-50">Product</a>
+                <a href="#" class=" px-4 py-2 rounded-xl hover:bg-gray-300 hover:scale-105 transform transition duration-50">About</a>
+                <a href="#" class=" px-4 py-2 rounded-xl hover:bg-gray-300 hover:scale-105 transform transition duration-50">Blog</a>
+            </nav>
+            <div class="hidden md:flex space-x-4 items-center">
+                <a href="#" class="text-gray-900 hover:text-green-300 flex items-center space-x-1">
+                    <i class="fas fa-phone"></i>
+                    <i class="fab fa-whatsapp"></i>
+                    <span>+91 8348847663</span>
+                </a>
+                <a href="#" class="bg-yellow-500 text-red-600 px-6 py-2 rounded-full hover:bg-yellow-600 transition duration-300 ease-in-out">Order Now</a>
+            </div>
+        </div>
     </div>
 
-    <div class="product">
-        <a href="/order.html">
+    <!-- Responsive navigation menu -->
+    <div id="mobile-menu" class="navbar md:hidden hidden mt-16 cursor-pointer bg-opacity-10 backdrop-blur-md p-3 rounded-xl shadow-lg border border-white border-opacity-10 py-2">
+        <a href="/index.html" class="block px-4 py-2 hover:bg-red-700">Home</a>
+        <a href="/products.html" class="block px-4 py-2 hover:bg-red-700">Product</a>
+        <a href="#" class="block px-4 py-2 hover:bg-red-700">About</a>
+        <a href="#" class="block px-4 py-2 hover:bg-red-700">Blog</a>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4">
+
+        <!-- Product 1 -->
+        <div class="product bg-white rounded-lg shadow-md overflow-hidden">
+            <a href="/order.html">
+                <img src="/Cake_photo/cake (1).jpg" alt="Cake" class="w-full h-auto">
+                <h3 class="text-center text-lg font-semibold mt-2">Cake</h3>
+                <p class="text-center text-gray-700 font-medium">199</p>
+            </a>
+        </div>
+    
+
+        <div class="product bg-white rounded-lg shadow-md overflow-hidden">
+            <a href="/order.html">
             <img src="/Cake_photo/cake (2).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
             <i class="fa-solid fa-indian-rupee-sign"> 199</i>
         </a>
     </div>
 
-    <div class="product">
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
+
         <a href="/order.html">
             <img src="/Cake_photo/cake (3).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
@@ -36,7 +86,7 @@
         </a>
     </div>
 
-    <div class="product">
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
         <a href="/order.html">
             <img src="/Cake_photo/cake (4).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
@@ -44,7 +94,7 @@
         </a>
     </div>
 
-    <div class="product">
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
         <a href="/order.html">
             <img src="/Cake_photo/cake (5).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
@@ -52,22 +102,21 @@
         </a>
     </div>
 
-    <div class="product">
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
         <a href="/order.html">
             <img src="/Cake_photo/cake (6).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
             <i class="fa-solid fa-indian-rupee-sign"> 199</i>
         </a>
     </div>
-
-    <div class="product">
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
         <a href="/order.html">
             <img src="/Cake_photo/cake (7).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
             <i class="fa-solid fa-indian-rupee-sign"> 199</i>
         </a>
     </div>
-    <div class="product">
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
         <a href="/order.html">
             <img src="/Cake_photo/cake (8).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
@@ -75,7 +124,7 @@
         </a>
     </div>
 
-    <div class="product">
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
         <a href="/order.html">
             <img src="/Cake_photo/cake (9).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
@@ -83,7 +132,7 @@
         </a>
     </div>
 
-    <div class="product">
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
         <a href="/order.html">
             <img src="/Cake_photo/cake (10).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
@@ -91,7 +140,7 @@
         </a>
     </div>
 
-    <div class="product">
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
         <a href="/order.html">
             <img src="/Cake_photo/cake (11).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
@@ -99,38 +148,35 @@
         </a>
     </div>
 
-    <div class="product">
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
         <a href="/order.html">
             <img src="/Cake_photo/cake (12).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
             <i class="fa-solid fa-indian-rupee-sign"> 199</i>
         </a>
     </div>
-
-    <div class="product">
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
         <a href="/order.html">
             <img src="/Cake_photo/cake (13).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
             <i class="fa-solid fa-indian-rupee-sign"> 199</i>
         </a>
     </div>
-
-    <div class="product">
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
         <a href="/order.html">
             <img src="/Cake_photo/cake (14).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
             <i class="fa-solid fa-indian-rupee-sign"> 199</i>
         </a>
     </div>
-
-    <div class="product">
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
         <a href="/order.html">
             <img src="/Cake_photo/cake (15).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
             <i class="fa-solid fa-indian-rupee-sign"> 199</i>
         </a>
     </div>
-    <div class="product">
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
         <a href="/order.html">
             <img src="/Cake_photo/cake (16).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
@@ -138,15 +184,14 @@
         </a>
     </div>
 
-    <div class="product">
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
         <a href="/order.html">
             <img src="/Cake_photo/cake (17).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
             <i class="fa-solid fa-indian-rupee-sign"> 199</i>
         </a>
     </div>
-
-    <div class="product">
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
         <a href="/order.html">
             <img src="/Cake_photo/cake (18).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
@@ -154,7 +199,7 @@
         </a>
     </div>
 
-    <div class="product">
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
         <a href="/order.html">
             <img src="/Cake_photo/cake (19).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
@@ -162,7 +207,7 @@
         </a>
     </div>
 
-    <div class="product">
+    <div class="product bg-white rounded-lg shadow-md overflow-hidden">
         <a href="/order.html">
             <img src="/Cake_photo/cake (20).jpg" alt="Samsung Galaxy S20 Ultra">
             <h3>Cake</h3>
@@ -179,5 +224,13 @@
     <!-- Clear floats after each row -->
 
 </body>
+<script>
+    // Toggle mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
 
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
 </html>

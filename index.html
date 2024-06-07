@@ -5,125 +5,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CaKeFaCe</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <!-- Add Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .navbar {
+            background-color: rgba(255, 251, 251, 0.884); /* Translucent white background */
+        }
+    </style>
 </head>
 
-<body>
-    <div class="topbar">
-        <div class="logo-container">
-            <div class="logo">
-                <i class="fa-solid fa-cake-candles" style="color: rgb(233,85,17); font-size: 40px;"></i>
+<body class="bg-gray-100 font-roboto">
+    <!-- Topbar -->
+    <div class="fixed top-0 left-0 right-0 z-50 navbar">
+        <div class="container mx-auto flex justify-between items-center px-4 text-gray-900 bg-opacity-30 backdrop-blur-md p-3 rounded-xl shadow-lg border border-white border-opacity-10">
+            <h2 class="text-3xl font-bold">CaKeFaCe</h2>
+            <!-- Responsive navigation menu -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-gray-900"></i>
+                </button>
             </div>
-        </div>
-        <h2 id="CaKe">CaKeFaCe</h2>
-        <div class="left">
-            <a href="" id="home"> <i class="fa-solid fa-house"></i> Home</a>
-            <a href="/products.html" id="product"><i class="fa-brands fa-opencart"></i> Product</a>
-            <a href="" id="about"> <i class="fa-regular fa-address-card"></i> About</a>
-            <a href="" id="blog">Blog</a>
-        </div>
-        <div class="right">
-            <a href="https://wa.me/qr/AN677CLW47B7D1" id="contact"> <i class="fa-solid fa-phone "></i> / <i class="fa-brands fa-whatsapp" style="color: green; font-size: 22px;"></i> +91 8348847663
-            </a>
-            <a href="/products.html" id="order">Order Now</a>
-        </div>
-    </div>
-    <div class="contants">
-        <div class="sds">
-            <div class="info">
-                <h1 id="self">Hey,I am Sagar.Making Cakes For Everyone. Want some of it.</h1>
-                <h1 id="hurry"> Hurry up limited stocks</h1>
-                <a href="/products.html" id="orderNow">Order Now</a>
-            </div>
-            <div class="background"></div>
-
-
-        </div>
-        <h1 style="margin: 5% 0% 1% 8%;">Hey, I have a secret 🤫.</h1>
-        <h1 id="new">You can order custom Cakes </h1>
-        <div class="coustom">
-            <h2 style="margin: 0% 0% 1% 8%;">just click the button</h2>
-            <a href="#" id="customButton" style="color: white;">custom</a>
-        </div>
-    </div>
-    <h2 style="text-align: center; border-top: 2px dashed black;">Featured Cakes</h2>
-    <div class="movies">
-        <div class="box">
-            <div class="box-img">
-                <a href="/order.html"><img src="/photo/1.jpeg" class="image" alt=""></a>
-            </div>
-            <div class="box-details">
-                <h3>Deluxe Chocolate Cake</h3>
-                <p class="price">Price: $299.00</p>
-            </div>
-        </div>
-        <div class="box">
-            <div class="box-img">
-                <a href="/order.html"><img src="/photo/50+ Birthday Wishes and Quotes for Wife in Hindi - पत्नी के लिए जन्मदिन की शायरी.jpeg" class="image" alt=""></a>
-            </div>
-            <div class="box-details">
-                <h3>Birthday Wishes Cake</h3>
-                <p class="price">Price: $299.00</p>
-            </div>
-        </div>
-        <div class="box">
-            <div class="box-img">
-                <a href="/order.html"><img src="/photo/Red and White Valentine's Day Cake with Mini Hearts - Curly Girl Kitchen.jpeg" class="image" alt=""></a>
-            </div>
-            <div class="box-details">
-                <h3>Valentine's Day Cake</h3>
-                <p class="price">Price: $299.00</p>
-            </div>
-        </div>
-        <div class="box">
-            <div class="box-img">
-                <a href="/order.html"><img src="/photo/50+ Birthday Wishes and Quotes for Wife in Hindi - पत्नी के लिए जन्मदिन की शायरी.jpeg" class="image" alt=""></a>
-            </div>
-            <div class="box-details">
-                <h3>Birthday Wishes Cake</h3>
-                <p class="price">Price: $299.00</p>
+            <nav class="hidden md:flex space-x-6">
+                <a href="/index.html" class=" px-4 py-2 rounded-xl hover:bg-gray-300 hover:scale-105 transform transition duration-50">Home</a>
+                <a href="/products.html" class=" px-4 py-2 rounded-xl hover:bg-gray-300 hover:scale-105 transform transition duration-50">Product</a>
+                <a href="#" class=" px-4 py-2 rounded-xl hover:bg-gray-300 hover:scale-105 transform transition duration-50">About</a>
+                <a href="#" class=" px-4 py-2 rounded-xl hover:bg-gray-300 hover:scale-105 transform transition duration-50">Blog</a>
+            </nav>
+            <div class="hidden md:flex space-x-4 items-center">
+                <a href="#" class="text-gray-900 hover:text-green-300 flex items-center space-x-1">
+                    <i class="fas fa-phone"></i>
+                    <i class="fab fa-whatsapp"></i>
+                    <span>+91 8348847663</span>
+                </a>
+                <a href="#" class="bg-yellow-500 text-red-600 px-6 py-2 rounded-full hover:bg-yellow-600 transition duration-300 ease-in-out">Order Now</a>
             </div>
         </div>
     </div>
+
+    <!-- Responsive navigation menu -->
+    <div id="mobile-menu" class="md:hidden hidden mt-16 cursor-pointer bg-opacity-10 backdrop-blur-md p-3 rounded-xl shadow-lg border border-white border-opacity-10 py-2">
+        <a href="/index.html" class="block px-4 py-2 hover:bg-red-700">Home</a>
+        <a href="/products.html" class="block px-4 py-2 hover:bg-red-700">Product</a>
+        <a href="#" class="block px-4 py-2 hover:bg-red-700">About</a>
+        <a href="#" class="block px-4 py-2 hover:bg-red-700">Blog</a>
     </div>
 
-    <div class="container">
-        <div class="wrapper">
-            <div class="wrapper-holder">
-                <div id="slider-img-1"></div>
-                <div id="slider-img-2"></div>
-                <div id="slider-img-3"></div>
-                <div id="slider-img-4"></div>
+    <!-- Main Content -->
+    <div class="container mx-auto py-16 px-4 mt-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="flex items-center justify-center transform transition duration-300 hover:scale-105">
+                <img src="https://via.placeholder.com/400" alt="Cake" class="w-full rounded-lg shadow-lg border border-red-600">
+            </div>
+            <div>
+                <h1 class="text-4xl md:text-5xl font-bold text-red-600 mb-4">Hey, I'm Sagar. Making Cakes For Everyone.</h1>
+                <p class="text-lg text-gray-700 mb-8">Hurry up, limited stocks.</p>
+                <a href="/order.html" class="bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition duration-300 ease-in-out">Order Now</a>
             </div>
         </div>
 
-        <div class="wrapper">
-            <div class="wrapper-holder">
-                <div id="slider-img-101"></div>
-                <div id="slider-img-102"></div>
-                <div id="slider-img-103"></div>
-                <div id="slider-img-104"></div>
-            </div>
+        <div class="mt-16 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-red-600 mb-4">Hey, I have a secret 🤫.</h2>
+            <h3 class="text-xl md:text-2xl text-red-600 mb-6">You can order custom cakes.</h3>
+            <a href="#" class="bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition duration-300 ease-in-out">Customize Now</a>
         </div>
-
     </div>
 
+    <!-- Featured Cakes -->
+    <div class="bg-red-600 text-white py-16 relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Featured Cakes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="max-w-sm mx-auto  rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 text-gray-200 cursor-pointer bg-opacity-10 backdrop-blur-md p-3 rounded-xl shadow-lg border border-white border-opacity-10">
+                    <img src="/photo/1.jpeg" alt="Deluxe Chocolate Cake" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Deluxe Chocolate Cake</h3>
+                        <p class="text-gray-700">Price: $299.00</p>
+                    </div>
+                </div>
 
-    <footer>
-        <div class="additional">
-            <ul id="realLife">
-                <li>Contact</li>
-                <li>Mob no. +91 8348847663</li>
-                <li><i class="fa-solid fa-envelope "></i>: jayitachattopadhyay154@gmail.com</li>
-            </ul>
-            <ul id="socialLife">
-                <li><i class="fa-brands fa-instagram "></i><a href="https://www.instagram.com/jayitachattopadhyay19/">Instagram</a></li>
-                <li><i class="fa-brands fa-facebook "></i><a href="https://www.facebook.com/jayitachattopadhyay99?mibextid=ZbWKwL">My Facebook</a></li>
-            </ul>
+                <div class="max-w-sm mx-auto  rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 text-gray-200 cursor-pointer bg-opacity-10 backdrop-blur-md p-3 rounded-xl shadow-lg border border-white border-opacity-10">
+                    <img src="/photo/Red and White Valentine's Day Cake with Mini Hearts - Curly Girl Kitchen.jpeg" alt="Deluxe Chocolate Cake" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Deluxe Chocolate Cake</h3>
+                        <p class="text-gray-700">Price: $299.00</p>
+                    </div>
+                </div>
+                <div class="max-w-sm mx-auto  rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 text-gray-200 cursor-pointer bg-opacity-10 backdrop-blur-md p-3 rounded-xl shadow-lg border border-white border-opacity-10">
+                    <img src="/photo/50+ Birthday Wishes and Quotes for Wife in Hindi - पत्नी के लिए जन्मदिन की शायरी.jpeg" alt="Deluxe Chocolate Cake" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Deluxe Chocolate Cake</h3>
+                        <p class="text-gray-700">Price: $299.00</p>
+                    </div>
+                </div>
+                <!-- Add more cake cards here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">Contact Us</h2>
+                <nav class="flex space-x-4">
+                    <a href="#" class="hover:text-gray-400">Instagram</a>
+                    <a href="#" class="hover:text-gray-400">Twitter</a>
+                    <a href="#" class="hover:text-gray-400">Facebook</a>
+                </nav>
+            </div>
+            <div class="text-center">
+                <p class="mb-2">Phone: +91 8348847663</p>
+                <p class="mb-2">Email: jayitachattopadhyay154@gmail.com</p>
+                <p>&copy; 2023 CaKeFaCe. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        // Toggle mobile menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+    
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
